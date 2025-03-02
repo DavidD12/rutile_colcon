@@ -1,0 +1,24 @@
+[package]
+name = "rutile_colcon"
+version = "0.1.0"
+edition = "2024"
+authors = ["David Doose <david.doose@onera.fr>"]
+license = "LGPL-3.0-only"
+description = "Simple rutile colcon generator"
+repository = "https://github.com/DavidD12/rutile_colcon"
+keywords = ["RSO2", "r2r"]
+
+[dependencies]
+log = "0.4.0"
+env_logger = "0.8.4"
+convert_case = "0.6.0"
+clap = { version = "4.5.26", features = ["derive"] }
+heck = "0.4.1"
+
+[lib]
+name = "rutile_colcon"
+path = "src/lib.rs"
+
+[[bin]]
+name = "rutile_colcon"
+path = "bin/main.rs"
