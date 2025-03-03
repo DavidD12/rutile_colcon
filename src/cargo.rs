@@ -24,7 +24,6 @@ pub fn generate_cargo(
         .arg("init")
         .arg("--bin")
         .arg(directory)
-        .current_dir(directory)
         .output()?;
     let _output = Command::new("cargo")
         .arg("add")
