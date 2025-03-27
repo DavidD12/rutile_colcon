@@ -27,7 +27,17 @@ pub fn generate_cargo(
         .output()?;
     let _output = Command::new("cargo")
         .arg("add")
+        .arg("r2r")
+        .current_dir(directory)
+        .output()?;
+    let _output = Command::new("cargo")
+        .arg("add")
         .arg("rutile_r2r")
+        .current_dir(directory)
+        .output()?;
+    let _output = Command::new("cargo")
+        .arg("add")
+        .arg("r2r")
         .current_dir(directory)
         .output()?;
     let _output = Command::new("rm")
