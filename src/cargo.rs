@@ -37,7 +37,9 @@ pub fn generate_cargo(
         .output()?;
     let _output = Command::new("cargo")
         .arg("add")
-        .arg("r2r")
+        .arg("tokio")
+        .arg("--features")
+        .arg("all")
         .current_dir(directory)
         .output()?;
     let _output = Command::new("rm")
