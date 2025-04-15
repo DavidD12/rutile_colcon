@@ -39,7 +39,7 @@ pub fn generate_cargo(
         .arg("add")
         .arg("tokio")
         .arg("--features")
-        .arg("all")
+        .arg("full")
         .current_dir(directory)
         .output()?;
     let _output = Command::new("rm")

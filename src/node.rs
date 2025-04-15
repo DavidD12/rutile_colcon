@@ -4,17 +4,9 @@ fn main_to_string(package_name: &str) -> Result<String, String> {
     let s = format!(
         r#"use rutile::*;
 
-#[derive(Default)]
-pub struct MyData {{}}
-
-impl Data for MyData {{
-    fn initialize(&mut self, _: &Node<Self>) -> Result<()> {{
-        Ok(())
-    }}
-}}
-
-fn main() -> Result<()> {{
-    let mut node: Node<MyData> = Node::create("{}_node", "")?;
+#[tokio::main]
+async fn main() -> Result<()> {{
+    let mut node = Node::create("{}_node", "")?;
 
     node.spin();
 
