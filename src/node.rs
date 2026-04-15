@@ -4,7 +4,7 @@ fn main_to_string(package_name: &str) -> Result<String, String> {
     let s = format!(
         r#"use rutile_r2r::future::*;
 
-async fn main() -> Result<()> {{
+fn main() -> Result<()> {{
     let mut node = Node::create("{}_node", "")?;
     node.spin();
     Ok(())
