@@ -2,14 +2,11 @@ use super::*;
 
 fn main_to_string(package_name: &str) -> Result<String, String> {
     let s = format!(
-        r#"use rutile::*;
+        r#"use rutile_r2r::future::*;
 
-#[tokio::main]
 async fn main() -> Result<()> {{
     let mut node = Node::create("{}_node", "")?;
-
     node.spin();
-
     Ok(())
 }}
 "#,
