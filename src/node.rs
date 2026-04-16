@@ -6,7 +6,7 @@ fn main_to_string(package_name: &str) -> Result<String, String> {
 
 fn main() -> Result<()> {{
     let mut node = Node::create("{}_node", "")?;
-    node.spin();
+    node.spin(std::time::Duration::from_millis(10));
     Ok(())
 }}
 "#,
